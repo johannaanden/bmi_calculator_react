@@ -12,10 +12,10 @@ class DisplayResult extends Component {
     }
 
     calculate() {
-        var method = this.state.methodType;
         var weight= this.props.weight;
         var height= this.props.height;
-        this.setState({ bmiMessage: bmiCalculation(method, weight, height) });
+        var method = this.state.methodType;
+        this.setState({ bmiMessage: bmiCalculation(weight, height, method) });
     }
 
     calculateMethod () {
