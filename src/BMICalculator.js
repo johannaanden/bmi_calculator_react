@@ -1,5 +1,3 @@
-import { helpers } from "handlebars";
-
 export const bmiCalculation = (weight, height, method) => {
     parseFloat(weight);
     parseFloat(height);
