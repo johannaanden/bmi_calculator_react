@@ -6,7 +6,8 @@ class DisplayResult extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            bmiMessage: ''
+            bmiMessage: '',
+            methodType: 'Metric'
         };
     }
 
@@ -19,7 +20,8 @@ class DisplayResult extends Component {
     render() {
         return (
             <div>
-                <button onClick={() => this.calculate()}Calculate></button>
+                <button onClick={() => this.calculateMethod()}>Change calculation method</button>
+                <button onClick={() => this.calculate()}>Calculate</button>
                 <div>{this.state.bmiMessage}</div>
             </div>
         )
