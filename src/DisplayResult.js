@@ -20,7 +20,7 @@ class DisplayResult extends Component {
     render() {
         return (
             <div>
-                <button onClick={() => this.calculate()}>Calculate</button>
+                <button name="calculate" onClick={() => this.calculate()}>Calculate</button>
                 <div>{this.state.bmiMessage}</div>
             </div>
         )
