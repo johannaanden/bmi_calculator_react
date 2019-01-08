@@ -11,8 +11,8 @@ class DisplayResult extends Component {
 
     render() {
         return (
-            <div id='response'>
-                {this.calculate()}
+            <div>
+                <button onClick={() => this.calculate()}Calculate></button>
             </div>
         )
     }
