@@ -24,12 +24,16 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-        <label>Weight(kg)</label>
+        <label>
+          Weight {this.state.methodType === 'Metric' ? '(kg)' : '(lbs)'}
+        </label>
           <input name="weight" value={this.state.weight} onChange={(e) => this.setState({ weight: e.target.value })} />
         </div>
 
         <div>
-        <label>Height(cm)</label>
+        <label>
+          Height {this.state.methodType === 'Metric' ? '(cm)' : '(inch)'}
+        </label>
           <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
         </div>
 
