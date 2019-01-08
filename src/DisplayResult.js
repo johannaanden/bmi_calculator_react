@@ -6,30 +6,20 @@ class DisplayResult extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            bmiMessage: '',
-            methodType: 'Metric'
+            bmiMessage: ''
         };
     }
 
     calculate() {
         var weight= this.props.weight;
         var height= this.props.height;
-        var method = this.state.methodType;
+        var method = this.props.methodType;
         this.setState({ bmiMessage: bmiCalculation(weight, height, method) });
-    }
-
-    calculateMethod () {
-        if (this.state.methodType === 'Metric') {
-            this.setState({ methodType: 'Imperial' });
-        } else {
-            this.setState({ methodType: 'Metric'})
-        }
     }
 
     render() {
         return (
             <div>
-                <button onClick={() => this.calculateMethod()}>{this.state.methodType === 'Metric' ? 'Change to Imperial' : 'Change to Metric'}</button>
                 <button onClick={() => this.calculate()}>Calculate</button>
                 <div>{this.state.bmiMessage}</div>
             </div>
