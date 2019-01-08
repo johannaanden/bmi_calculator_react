@@ -29,7 +29,7 @@ class DisplayResult extends Component {
     render() {
         return (
             <div>
-                <button onClick={() => this.calculateMethod()}>Change method</button>
+                <button onClick={() => this.calculateMethod()}>{this.state.methodType === 'Metric' ? 'Change to Imperial' : 'Change to Metric'}</button>
                 <button onClick={() => this.calculate()}>Calculate</button>
                 <div>{this.state.bmiMessage}</div>
             </div>
