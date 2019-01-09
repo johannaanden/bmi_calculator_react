@@ -3,12 +3,12 @@ module.exports = {
         headless: false,
         slowMo: 10,
         devtools: true,
-        args: ["--no-sandbox", "--disable-popup-blocking", "--disable-infobars"],
+        args: ["--no-sandbox", "--disable-popup-blocking", "--disable-infobars"]
     },
     browserContext: 'default',
     server: {
-        command: `PORT=3000 react-scripts start`,
+        command: `PORT=3000 BROWSER=none npm run start `,
         port: 3000,
         launchTimeout: 4000,
-    },
-}
+    }
+} 
