@@ -37,7 +37,7 @@ class App extends Component {
           <input name="height" value={this.state.height} onChange={(e) => this.setState({ height: e.target.value })} />
         </div>
 
-        <button onClick={() => this.calculateMethod()}>{this.state.methodType === 'Metric' ? 'Change to Imperial' : 'Change to Metric'}</button>
+        <button name="methodSelector" onClick={() => this.calculateMethod()}>{this.state.methodType === 'Metric' ? 'Change to Imperial' : 'Change to Metric'}</button>
 
         <DisplayResult
           weight={this.state.weight}
