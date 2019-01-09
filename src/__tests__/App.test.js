@@ -14,4 +14,12 @@ describe ('<App />', () => {
         expect(component.contains(heightLabel)).toEqual(true);
     })
 
+    it('Can change calculation method', () => {
+        const component = shallow(<App />);
+        component.setState({methodType: 'Imperial'})
+        const weightLabel = <label>Weight (lbs)</label>;
+        const heightLabel = <label>Height (inch)</label>;
+        expect(component.contains(weightLabel)).toEqual(true);
+        expect(component.contains(heightLabel)).toEqual(true);
+    })
 })
